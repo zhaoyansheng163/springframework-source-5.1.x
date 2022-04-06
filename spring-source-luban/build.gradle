@@ -1,0 +1,16 @@
+group 'org.springframework'
+version '5.1.11.BUILD-SNAPSHOT'
+description = "Spring TestContext Framework"
+
+dependencyManagement {
+    imports {
+        mavenBom "org.junit:junit-bom:${junit5Version}"
+        mavenBom "io.projectreactor:reactor-bom:${reactorVersion}"
+        mavenBom "io.netty:netty-bom:${nettyVersion}"
+    }
+}
+
+dependencies {
+    optional(project(":spring-context"))
+
+}
